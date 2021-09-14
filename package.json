@@ -1,0 +1,21 @@
+{
+  "name": "afyafrica",
+  "version": "1.0.0",
+  "description": "This project contains all the files related to the Afyafrica Onbording API. This streamlines the workflow with the partner companies.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayme20/Onboarding-API.git"
+  },
+  "author": "james mtalii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayme20/Onboarding-API/issues"
+  },
+  "homepage": "https://github.com/jayme20/Onboarding-API#readme"
+}
