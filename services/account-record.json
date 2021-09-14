@@ -1,0 +1,11 @@
+{
+  "error": [
+    {
+      "type": "error",
+      "title": "SimpleStorage: [account]",
+      "detail": "Not Found [1c0x0mzp23t]",
+      "status": "400",
+      "instance": "http://account-atk.herokuapp.com/1c0x0mzp23t"
+    }
+  ]
+}
