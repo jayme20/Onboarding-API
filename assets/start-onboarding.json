@@ -1,0 +1,28 @@
+{
+    "onboarding": {
+        "metadata": [
+            {
+                "id": "title",
+                "value": "Afyafrica, Onboarding"
+            },
+            {
+                "id": "author",
+                "value": "James Mtalii"
+            }
+        ],
+        "links": [
+            {
+                "id": "startOnboarding",
+                "href": "http://api.example.org/start",
+                "method": "POST",
+                "properties": []
+            },
+            {
+                "id": "home",
+                "href": "http://api.example.org/",
+                "method": "GET"
+            }
+        ],
+        "items": []
+    }
+}

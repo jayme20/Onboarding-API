@@ -6,16 +6,32 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
-
   },
+  "keywords": [
+    "onboarding",
+    "company",
+    "account",
+    "activity",
+    "api"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jayme20/Onboarding-API.git"
   },
   "author": "james mtalii",
   "license": "ISC",
+  "assets": {
+    "alps": "OnboardingAPI.json",
+    "apiDocs": "Onboarding.md"
+  },
   "bugs": {
     "url": "https://github.com/jayme20/Onboarding-API/issues"
   },
-  "homepage": "https://github.com/jayme20/Onboarding-API#readme"
+  "homepage": "https://github.com/jayme20/Onboarding-API#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
 }
