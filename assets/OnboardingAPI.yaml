@@ -1,0 +1,108 @@
+alps:
+  version: '1.0'
+  title: "Onboarding API"
+  doc:
+    type: "markdown"
+    value: "This is the ALPS document for Afyafrica's **Onboarding API**"
+  
+  descriptor:
+    # vocabulary properties
+    - id: "identifier"
+      type: "semantic"
+      text: "unique identifier for this record"
+      ref: "http://schema.org/identifier"
+
+    - id: "companyName"
+      type: "semantic"
+      text: "Company's legal name"
+      ref: "http://schema.org/legalName"
+
+    - id: "email"
+      type: "semantic"
+      text: "Company's primary email account"
+      ref: "http://schema.org/email"
+
+    - id: "telephone"
+      type: "semantic"
+      text: "Company's phone number"
+      ref: "http://schema.org/telephone"
+
+    - id: "status"
+      type: "semantic"
+      text: "Account status (active inactive suspended)"
+      ref: "http://schema.org/status"
+
+    - id: "maxValue"
+      type: "semantic"
+      text: "Account's maximum spending limit"
+      ref: "http://schema.org/maxValue"
+
+    - id: "discount"
+      type: "semantic"
+      text: "Account's default sales discount (as a percentage)"
+      ref: "http://schema.org/discount"
+
+    # reference grouping
+    - id: "wip"
+      type: "group"
+      descriptor:
+        - href: "#identifier"
+        - href: "#companyName"
+        - href: "#email"
+        - href: "#telephone"
+        - href: "#status"
+        - href: "#maxValue"
+        - href: "#discount"
+    
+    # actions
+    - id: "startOnboarding"
+      type: "unsafe"
+      rt: "wip"
+
+    - id: "collectCompanyData"
+      type: "safe"
+      rt: "wip"
+      descriptor:
+        - href: "#identifier"
+
+
+    - id: "SaveToWIP"
+      type: "idempotent"
+      rt: "wip"
+      descriptor:
+        - href: "#identifier"
+        - href: "#companyName"
+        - href: "#email"
+        - href: "#telephone"
+        - href: "#status"
+        - href: "#maxValue"
+        - href: "#discount"
+
+
+    - id: "CollectAccountData"
+      type: "safe"
+      rt: "wip"
+      descriptor:
+        - href: "#identifier"
+        - href: "#companyName"
+        - href: "#email"
+        - href: "#telephone"
+        - href: "#status"
+        - href: "#maxValue"
+        - href: "#discount"
+
+
+    - id: "completeOnboarding"
+      type: "idempotent"
+      rt: "wip"
+      descriptor:
+        - href: "#identifier"
+
+    - id: "abandonOnboarding"
+      type: "idempotent"
+      rt: "wip"
+      descriptor:
+        - href: "#identifier"
+        
+    - id: "goHome"
+      type: "safe"
